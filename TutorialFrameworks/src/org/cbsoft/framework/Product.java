@@ -3,6 +3,8 @@ package org.cbsoft.framework;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.cbsoft.application.Uppercase;
+
 public class Product{
 	
 	private String name;
@@ -17,9 +19,11 @@ public class Product{
 		this.price = price;
 		this.code = code;
 	}
+	@Uppercase
 	public String getName() {
 		return name;
 	}
+	
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -29,12 +33,15 @@ public class Product{
 	public void setBrand(String brand) {
 		this.brand = brand;
 	}
+	@Prefix("R$")
 	public double getPrice() {
 		return price;
 	}
 	public void setPrice(double price) {
 		this.price = price;
 	}
+	
+	@Prefix("NR#")
 	public String getCode() {
 		return code;
 	}
